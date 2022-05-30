@@ -11,7 +11,7 @@ LANDING_DESCRIPTION = "A bunch of notes for the world to see."
 # (REQUIRED) The Markdown page linked to landing page button (e.g. put home for ./home.md)
 LANDING_PAGE = "README"
 # (Optional) Site title on landing page
-LANDING_TITLE = "GianPDev's Knowledge Base'"
+LANDING_TITLE = "GianPDev's Knowledge Base"
 PYTHON_VERSION = "3.8"
 # (REQUIRED) Site repo URL
 REPO_URL = "https://github.com/GianPDev/GianPDev_KnowledgeBase"
