@@ -6,8 +6,7 @@ install_git_mosh.sh
 chmod +x install_git_mosh.sh
 ```
 
-*This works with [[SELinux]] set to permissive*
-
+*This works with [[SELinux#Set SELinux to permissive|SELinux]] set to permissive*
 
 ```sh
 #!/bin/bash
