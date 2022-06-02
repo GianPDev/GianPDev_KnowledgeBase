@@ -2,3 +2,4 @@
 [[vim]]
 [[tmux]]
 [[ssh]]
+[[Date-Time]]
