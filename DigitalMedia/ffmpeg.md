@@ -16,5 +16,5 @@ Should look like:
 ```html
 <body style="background-color:#FF0000;">
 ```
-
+![[Transparent WebM Test.gif]]
 ![[Transparent WebM Test.mp4]]
