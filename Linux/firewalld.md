@@ -1,3 +1,7 @@
+---
+tags: [firewall, firewalld, security, linux, sysadmin, portforward, portforwarding, ssh]
+---
+
 #### Show Firewall Rules
 ```bash
 sudo firewall-cmd --list-all

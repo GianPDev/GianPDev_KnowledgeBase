@@ -1,4 +1,6 @@
-
+---
+tags: [ffmpeg, video, transparency, webm, obs, transition, stringer, image]
+---
 
 #### Creating transparent webm video from TRANSPARENT png image sequence (Can be used for OBS Transition Stingers)
 ```bash

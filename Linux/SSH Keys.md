@@ -1,3 +1,6 @@
+---
+tags: [ssh, mosh, sysadmin, bash, connect, connection, remote, security]
+---
 - [[SSH Certificate Based Authentication (CA Signing Keys)]]
 
 #### Generate Key Pair (Recommended Settings)

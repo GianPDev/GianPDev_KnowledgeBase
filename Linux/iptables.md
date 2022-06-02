@@ -1,3 +1,6 @@
+---
+tags: [firewall, iptables, rules, security, linux, sysadmin, portforward, portforwarding, ssh]
+---
 ##### Show ip rules
 ```bash
 sudo iptables -L --line-numbers

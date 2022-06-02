@@ -1,3 +1,6 @@
+---
+tags: [firewall, firewalld, iptables, security, linux, sysadmin, portforward, portforwarding]
+---
 #### Check if SELinux is enabled
 ```bash
 sestatus

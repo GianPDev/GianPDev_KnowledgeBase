@@ -1,4 +1,6 @@
-
+---
+tags: [ssh, mosh, sysadmin, bash, connect, connection, remote, install]
+---
 #### Install Mosh (Centos/RHEL/RockyLinux)
 install_git_mosh.sh
 ```bash

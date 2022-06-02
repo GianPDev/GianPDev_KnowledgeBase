@@ -1,4 +1,6 @@
-
+---
+tags: [ssh, mosh, sysadmin, bash, editing, editor, texteditor, dev, developer, vi, vim, neovim, nano]
+---
 #### Launch Vim with no settings
 ```bash
 vim -u NONE filename.txt

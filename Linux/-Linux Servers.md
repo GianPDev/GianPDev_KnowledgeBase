@@ -3,3 +3,4 @@
 [[tmux]]
 [[ssh]]
 [[Date-Time]]
+[[bash]]

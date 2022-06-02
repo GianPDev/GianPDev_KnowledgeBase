@@ -1,3 +1,6 @@
+---
+tags: [ssh, mosh, sysadmin, bash, connect, connection, remote, multiplexer, screen, tmux, multiwindow]
+---
 #### Git install with my settings (Ubuntu)
 ubuntu_install_git_tmux.sh
 ```bash

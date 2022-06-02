@@ -1,4 +1,6 @@
-
+---
+tags: [time, date, datetime, config, linux, sysadmin]
+---
 
 #### Get Current Timezone information
 ```bash

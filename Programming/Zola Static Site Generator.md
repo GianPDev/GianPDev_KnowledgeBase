@@ -1,4 +1,6 @@
-
+---
+tags: [rust, webdev, server, web, website, miniserve, html, spa, ssg, static]
+---
 #### Creating Project
 ```bash
 mkdir project-folder

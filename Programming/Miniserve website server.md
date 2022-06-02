@@ -1,3 +1,6 @@
+---
+tags: [rust, webdev, server, web, website, miniserve, html, spa]
+---
 #### Serve Website with port
 ```bash
 # cargo install miniserve
