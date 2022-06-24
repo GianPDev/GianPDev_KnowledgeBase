@@ -10,7 +10,7 @@ vim -u NONE filename.txt
 replace_init_vim.sh
 ```bash
 # make executable
-chmod +x install_git_mosh.sh
+chmod +x replace_init_vim.sh
 ```
 
 ```sh

@@ -24,6 +24,10 @@ Get-Content -Path "$env:USERPROFILE/.ssh/id_rsa.pub" | ssh USER@server.ip.here "
 ```bash
 chmod 755 ~/.ssh
 chmod 755 ~/.ssh/authorized_keys
+chmod -R 755 ~/.ssh
+#or 
+
+chmod -R 700 ~/.ssh
 ```
 
 #### Revoke ssh key fingerprint:
