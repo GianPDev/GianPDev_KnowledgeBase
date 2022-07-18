@@ -2,6 +2,13 @@
 tags: [ssh, mosh, sysadmin, bash, powershell, edit, script, scripting, sed, terminal, editing, pipe, search, replace]
 ---
 
+#### Using rsync over SSH (better copy vs scp)
+
+Copy all files in docs folder to current folder in terminal (with progress and results `-avp`)
+```bash
+rsync -avP "USER@NETWORK:/home/USER/docs/*" .
+```
+
 #### Using Sed to modify files and pipe
 ```bash
 # search and replace without -i it just outputs to console

@@ -1,6 +1,11 @@
 ---
 tags: [ssh, mosh, sysadmin, bash, editing, editor, texteditor, dev, developer, vi, vim, neovim, nano]
 ---
+#### Special in shell command mode
+```bash
+vim -E
+```
+
 #### Launch Vim with no settings
 ```bash
 vim -u NONE filename.txt

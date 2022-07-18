@@ -64,7 +64,7 @@ add to .bashrc, then source .bashrc
 ```bash
 export GPG_TTY=$(tty)
 ```
-
+this also usually solves the `gpg: signing failed: Inappropriate ioctl for device`
 ### Sign Git Commits with GPG Key
 ```bash
 git config --global commit.gpgsign true
