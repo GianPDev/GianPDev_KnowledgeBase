@@ -24,7 +24,7 @@ gpg --list-signatures
 #### Importing and getting GPG Private keys to work with git signing
 Import private key
 ```bash
-gpg import private-key
+gpg --import private-key
 ```
 Can test if it works (most likely won't) by using this:
 ```bash

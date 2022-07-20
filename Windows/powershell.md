@@ -1,6 +1,17 @@
 ---
-tags: [terminal, powershell, bash, path, env, environment, string, console, sed, editing, piped, object, tostring]
+tags: [terminal, powershell, bash, path, env, environment, string, console, sed, editing, piped, object, tostring, files, hidden]
 ---
+
+#### Search directory for file (without searching within files)
+```powershell
+ls | Select-Object Name -ExpandProperty Name | Select-String SEARCHFILENAME
+```
+*If `Select-Object` was removed, it would search within text files*
+
+#### Show hidden files when using Get-Childitem (ls, dir or gci)
+```powershell
+ls -Force
+```
 
 #### Print Path Environment Variables as Plain String
 ```powershell

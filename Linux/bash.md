@@ -16,3 +16,9 @@ chsh -s /bin/bash
 ```bash
 sudo update-alternatives --config editor
 ```
+
+#### set ownership of folder to current user
+
+```bash
+chown -R $(whoami) ~/FOLDER
+```
