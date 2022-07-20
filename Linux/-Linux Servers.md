@@ -1,4 +1,4 @@
-[[Security]]
+[[Linux Security]]
 [[vim]]
 [[tmux]]
 [[ssh]]

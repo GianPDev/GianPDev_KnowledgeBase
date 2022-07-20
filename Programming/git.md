@@ -1,3 +1,6 @@
+---
+tags: [git, ssh, gpg, keys, commit, config, repo, download, github]
+---
 
 #### Setting up Git for commits
 ```bash

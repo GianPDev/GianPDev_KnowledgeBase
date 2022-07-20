@@ -1,4 +1,6 @@
-
+---
+tags: [storage, space, disk, files, df, fdisk]
+---
 #### Check disk drives:
 ```bash
 sudo fdisk -l

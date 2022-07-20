@@ -1,3 +1,6 @@
+---
+tags: [gpg, keys, signing, git, public, private, key, signature]
+---
 
 #### Generate Primary GPG Key
 Follow the Prompts (make sure to backup revoke certificate)

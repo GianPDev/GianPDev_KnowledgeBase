@@ -1,3 +1,6 @@
+---
+tags: [bash, linux, server, shell, fish, visudo]
+---
 [[bash utilities]]
 [[fish shell]]
 
@@ -18,7 +21,6 @@ sudo update-alternatives --config editor
 ```
 
 #### set ownership of folder to current user
-
 ```bash
 chown -R $(whoami) ~/FOLDER
 ```

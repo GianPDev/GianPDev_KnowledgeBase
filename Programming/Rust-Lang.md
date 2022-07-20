@@ -1,3 +1,6 @@
+---
+tags: [rust, programming, dev]
+---
 [[Zola Static Site Generator]]
 [[Miniserve website server]]
 
