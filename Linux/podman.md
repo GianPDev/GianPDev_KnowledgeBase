@@ -21,5 +21,5 @@ podman run -it --rm -v $PWD/:/workdir --network=host gianpdev/neovim-rust-docker
 ### Setting volume on containers in windows
 `//d` is the drive letter and folders are separated by `/` instead of `\`
 ```bash
-docker run -it --rm -v //d/dev/folder:/workdir neovim_rust_docker
+podman run -it --rm -v //d/dev/folder:/workdir neovim_rust_docker
 ```
