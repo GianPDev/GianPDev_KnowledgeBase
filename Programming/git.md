@@ -27,3 +27,19 @@ Gets latest and last binary file in Assets (recommend using sed to filter the ex
 ```bash
 URL=$(wget https://api.github.com/repos/<USER>/<REPO>/releases/latest -O - | awk -F \" -v RS="," '/browser_download_url/ {print $(NF-1)}'); wget $URL -O $(basename "$URL")
 ```
+
+### Git clone one specific folder
+Copied from: https://stackoverflow.com/a/69801161/11951047
+```bash
+git clone --no-checkout https://github.com/git/git
+cd git
+git sparse-checkout init --cone
+# that sets git config core.sparseCheckoutCone true
+git sparse-checkout set folder1/folder2
+git read-tree -mu HEAD
+```
+
+### Git move changed uncommitted work to a new branch
+```bash
+git checkout -b <new-branch>
+```
