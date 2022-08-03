@@ -1,6 +1,13 @@
 ---
 tags: [ssh, mosh, sysadmin, bash, editing, editor, texteditor, dev, developer, vi, vim, neovim, nano]
 ---
+
+### Save as sudo when editing system file as non-sudo
+```vim
+:w !sudo tee %
+```
+*Can press `L` to load and see changes (read only)*
+
 #### Special in shell command mode
 ```bash
 vim -E

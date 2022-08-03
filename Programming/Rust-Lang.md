@@ -6,10 +6,12 @@ tags: [rust, programming, dev]
 
 ### Creating Projects
 #### Create Project with Folder
+Choose --bin or --lib
 ```bash
 cargo new --bin/lib project-name
 ```
 #### Creating Project within Folder
+Choose --bin or --lib
 ```bash
 cargo init --bin/lib
 ```

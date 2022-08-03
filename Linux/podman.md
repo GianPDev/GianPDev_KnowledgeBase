@@ -23,3 +23,47 @@ podman run -it --rm -v $PWD/:/workdir --network=host gianpdev/neovim-rust-docker
 ```bash
 podman run -it --rm -v //d/dev/folder:/workdir neovim_rust_docker
 ```
+
+### Install Podman with Nvidia on Fedora (tested on Fedora 36)
+From: https://blog.shawonashraf.com/nvidia-podman-fedora-34
+
+```bash
+sudo rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm; sudo rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm; sudo dnf update -y
+```
+Install correct drivers: https://rpmfusion.org/Howto/NVIDIA
+Then reboot `sudo reboot`
+
+Install podman if it isn't already installed:
+```bash
+sudo dnf install podman
+```
+Check CUDA version (mine was `CUDA Version: 11.7`):
+```bash
+nvidia-smi
+```
+Check for latest distribution here: https://nvidia.github.io/nvidia-container-runtime/
+
+Set distribution value to the latest one
+```bash
+distribution=rhel9
+```
+Download and install repo:
+```bash
+curl -s -L https://nvidia.github.io/nvidia-container-runtime/$distribution/nvidia-container-runtime.repo | sudo tee /etc/yum.repos.d/nvidia-container-runtime.repo
+```
+Install nvidia container runtime
+```bash
+sudo dnf install nvidia-container-runtime
+```
+change no-cgroups to true: `no-cgroups = true`
+```bash
+sudo vi /etc/nvidia-container-runtime/config.toml
+```
+
+Running a container with gpu:
+```bash
+podman run -it --rm --security-opt=label=disable nvidia/cuda:11.7.0-runtime-ubuntu20.04 nvidia-smi
+```
+*`--security-opt=label=disable` is used to avoid selinux from blocking the gpu*
+*Also this should return the same info as running `nvidia-smi` on your own pc*
+

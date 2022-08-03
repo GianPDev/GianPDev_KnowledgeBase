@@ -2,6 +2,9 @@
 tags: [terminal, powershell, bash, path, env, environment, string, console, sed, editing, piped, object, tostring, files, hidden]
 ---
 
+[[winget (official package manager)]]
+[[chocolatey (package manager)]]
+
 #### Search directory for file (without searching within files)
 ```powershell
 ls | Select-Object Name -ExpandProperty Name | Select-String SEARCHFILENAME

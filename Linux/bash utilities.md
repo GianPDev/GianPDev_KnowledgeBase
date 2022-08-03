@@ -89,3 +89,8 @@ tar -xvf archive.tar file.mp3 -C ~/Downloads file2.mp4 -C ~/Textfiles file3.txt
 ```bash
 tar --delete -f archive.tar file.txt
 ```
+
+### Install ifconfig
+```bash
+yum install net-tools -y
+```
