@@ -1,6 +1,21 @@
 ---
 tags: [docker, podman, oci, container, build]
 ---
+### Replacing docker.sock in podman
+Install podman-docker
+```bash
+sudo dnf install podman-docker
+```
+Run 'sock' in separate terminal (in `-t 0` to forever keep it on)
+```bash
+podman system service -t 0
+```
+Use this variable instead of the docker.sock
+```bash
+-v $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock
+```
+*Running this without `podman system service -t 0` will cause the error: `no such file or directory`*
+
 ### "SHELL is not supported for OCI image format" when building with podman
 Need to add `--format docker`
 ```bash
@@ -60,10 +75,13 @@ change no-cgroups to true: `no-cgroups = true`
 sudo vi /etc/nvidia-container-runtime/config.toml
 ```
 
-Running a container with gpu:
+### Running a container with gpu:
 ```bash
 podman run -it --rm --security-opt=label=disable nvidia/cuda:11.7.0-runtime-ubuntu20.04 nvidia-smi
 ```
-*`--security-opt=label=disable` is used to avoid selinux from blocking the gpu*
-*Also this should return the same info as running `nvidia-smi` on your own pc*
+*This should return the same info as running `nvidia-smi` on your own pc*
+```bash
+--security-opt=label=disable
+```
+*This is used to avoid selinux from blocking the gpu*
 
