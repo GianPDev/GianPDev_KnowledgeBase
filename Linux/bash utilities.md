@@ -2,6 +2,7 @@
 tags: [ssh, mosh, sysadmin, bash, powershell, edit, script, scripting, sed, terminal, editing, pipe, search, replace]
 ---
 
+[[sshfs (mount remote drives)]]
 #### Using rsync over SSH (better copy vs scp)
 
 Copy all files in docs folder to current folder in terminal (with progress and results `-avp`)
@@ -94,3 +95,14 @@ tar --delete -f archive.tar file.txt
 ```bash
 yum install net-tools -y
 ```
+
+### Convert windows text file to linux (dos2unix without dos2unix)
+With tr:
+```bash
+for f in *.sh; do echo converting $f; tr -d "\15\32" < "$f" > $(basename "$f" .sh)_linux.sh; echo	output: $(basename "$f" .sh)_linux.sh; rm -f "$f"; mv "$(basename "$f" .sh)_linux.sh" "$f"; done
+```
+With perl:
+```bash
+for f in *.sh; do echo converting $f; perl -p -e 's/\r$//' < "$f" > $(basename "$f" .sh)_linux.sh; echo output: $(basename "$f" .sh)_linux.sh; rm -f "$f"; mv "$(basename "$f" .sh)_linux.sh" "$f"; done
+```
+

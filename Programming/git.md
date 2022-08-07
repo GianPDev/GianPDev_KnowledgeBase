@@ -14,6 +14,11 @@ git config --global user.name "John S. Smith"
 git config --global credential.credentialStore cache
 ```
 
+This stores the credentials in a plaintext file in `~/.git-credentials`
+```bash
+git config --global credential.helper store
+```
+
 ### Signing git commits and getting verified commits on github
 [[GPG-Keys#Generate Primary GPG Key]]
 

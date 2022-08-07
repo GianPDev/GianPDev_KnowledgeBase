@@ -55,3 +55,8 @@ Should look like this:
 nameserver 8.8.8.8
 nameserver 8.8.4.4
 ```
+
+### Change Hostname
+```bash
+hostnamectl set-hostname NAME
+```

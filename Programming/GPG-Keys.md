@@ -86,3 +86,10 @@ git config --global user.email email@emailplace.com
 ```bash
 git config --global user.name John Smith
 ```
+
+
+### gpg: [stdin]: clear-sign failed: No pinentry
+Install pinentry
+```bash
+sudo yum install pinentry
+```
