@@ -85,3 +85,28 @@ ln -s /usr/bin/python3 /usr/bin/python
 
 Note for the above two *solutions* I ran this [playbook](https://github.com/GianPDev/Ansible-Playbooks/blob/master/selinux-enable.yaml) that may have affected whether it worked (it tried to install python 3.8, python3 and pip installed selinux), but I believe the selinux problem should be solved by the two packages
 
+### Error installing kernel needs 6MB on /boot filesystem
+Error:
+```
+Transaction check error:
+  installing package kernel-3.10.0-1160.76.1.el7.x86_64 needs 6MB on the /boot filesystem
+
+Error Summary
+-------------
+Disk Requirements:
+  At least 6MB more space needed on the /boot filesystem.
+```
+`sudo` was not installed, login to root and
+```
+yum install sudo
+```
+clean up /boot (this cleans all but last 2 kernels on the system)
+```bash
+sudo yum install yum-utils
+```
+```bash
+sudo package-cleanup --oldkernels --count=2
+```
+```
+sudo yum update kernel
+```

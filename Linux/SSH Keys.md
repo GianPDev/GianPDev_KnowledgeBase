@@ -34,3 +34,7 @@ chmod -R 700 ~/.ssh
 ```bash
 ssh-keygen -R server.ip.here
 ```
+with port
+```bash
+ssh-keygen -R "[server.ip.here]:PORT"
+```

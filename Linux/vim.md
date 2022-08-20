@@ -18,6 +18,12 @@ vim -E
 vim -u NONE filename.txt
 ```
 
+### Force filetype for change syntax highlighting
+I have a CSS plugin which shows the colors inline, changing files to it activates it
+```bash
+:setfiletype css
+```
+
 #### My Neovim init.vim
 replace_init_vim.sh
 ```bash

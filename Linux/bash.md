@@ -40,7 +40,7 @@ for ip in $(cat serverips.txt); do ssh root@$ip "hostnamectl"; echo ""; done
 
 Make user sudo without password (has issues with passwords that have special characters)
 ```bash
-for ip in $(cat serverips.txt); do ssh admin@$ip 'hostnamectl; echo ""; sudo echo "admin ALL=(ALL) NOPASSWD:ALL" | sudo -S tee -a /etc/sudoers.d/ansible_admin'; done
+for ip in $(cat serverips.txt); do ssh USER@$ip 'hostnamectl; echo ""; sudo echo "USER ALL=(ALL) NOPASSWD:ALL" | sudo -S tee -a /etc/sudoers.d/ansible_admin'; done
 ```
 
 ### Yabs Error:  "`Warning: Both IPv4 AND IPv6 connectivity were not detected. Check for DNS issues...`" Or if curl is not working on anything
