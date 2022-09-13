@@ -1,7 +1,7 @@
 ---
 tags: [ssh, mosh, sysadmin, bash, powershell, edit, script, scripting, sed, terminal, editing, pipe, search, replace]
 ---
-
+[[lsof]]
 [[sshfs (mount remote drives)]]
 #### Using rsync over SSH (better copy vs scp)
 

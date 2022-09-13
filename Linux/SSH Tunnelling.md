@@ -11,3 +11,7 @@ By ssh tunnelling, you can work on a website on a remote server and test it like
 ```bash
 ssh -v -L 1111:127.0.0.1:1112 -N -f -l username remote_server_ip
 ```
+This also works
+```bash
+ssh -v -L 1111:127.0.0.1:1112 -N -f username@remote_server_ip
+```

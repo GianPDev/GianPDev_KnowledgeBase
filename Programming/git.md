@@ -2,6 +2,10 @@
 tags: [git, ssh, gpg, keys, commit, config, repo, download, github]
 ---
 
+### Undo last commit (without discarding new files)
+```bash
+git reset --soft HEAD~1
+```
 #### Setting up Git for commits
 ```bash
 git config --global user.email "EMAILNAME@EMAILPLACE.com"

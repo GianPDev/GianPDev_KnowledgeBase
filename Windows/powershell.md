@@ -43,3 +43,8 @@ is very similar to using bash's [[bash utilities#Using Sed to modify files and p
 # `n for new line
 # `r for return carriage
 ```
+
+### Adding Firewall rule in Windows via Powershell
+```powershell
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+```
