@@ -1,2 +1,2 @@
-[[ffmpeg]]
+[[DigitalMedia/ffmpeg]]
 [[imagemagick]]

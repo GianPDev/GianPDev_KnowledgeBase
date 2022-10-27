@@ -8,3 +8,5 @@
 [[Desktop Environments]]
 [[nix]]
 [[podman]]
+[[Proxmox]]
+[[Linux networking]]

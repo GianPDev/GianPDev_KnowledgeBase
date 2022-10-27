@@ -1,5 +1,5 @@
 ---
-tags: [ssh, mosh, sysadmin, bash, connect, connection, remote, security]
+tags: [ssh, mosh, sysadmin, bash, connect, connection, remote, security, key, keys, linux, windows]
 ---
 - [[SSH Certificate Based Authentication (CA Signing Keys)]]
 
@@ -37,4 +37,13 @@ ssh-keygen -R server.ip.here
 with port
 ```bash
 ssh-keygen -R "[server.ip.here]:PORT"
+```
+
+### Convert linux ssh key from ssh2 to PEM and back
+**WARNING**: This will overwrite the key, but is easily converted back
+```bash
+ssh-keygen -p -f id_rsa -m PEM
+```
+```bash
+ssh-keygen -p -f id_rsa -m SSH2
 ```

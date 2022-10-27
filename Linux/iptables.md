@@ -24,3 +24,27 @@ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 # F for flush I assume
 iptables -F
 ```
+
+### Restore iptables config (after saving using `iptables-save`)
+```bash
+sudo iptables-restore < /etc/iptables.rules
+```
+
+### Permanently enable iptables rrules
+```bash
+sudo yum install iptables-services -y
+# restore/change iptables (make sure it works and can ssh)
+```
+```bash
+sudo systemctl start iptables
+sudo systemctl enable iptables
+sudo systemctl status iptables
+```
+```bash
+sudo systemctl disable firewalld.service
+sudo systemctl stop firewalld.service
+```
+Login to root then:
+```bash
+iptables-save >/etc/sysconfig/iptables
+```

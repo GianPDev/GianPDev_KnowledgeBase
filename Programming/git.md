@@ -52,3 +52,42 @@ git read-tree -mu HEAD
 ```bash
 git checkout -b <new-branch>
 ```
+
+### Git Submodules
+https://gist.github.com/gitaarik/8735255
+Creating a submodule?
+```bash
+git submodule add git@github.com:url_to/awesome_submodule.git path_to_awesome_submodule
+```
+```bash
+git pull
+git submodule init
+```
+
+Pulling from repo with submodules
+```bash
+git clone --recurse-submodules
+```
+```bash
+git pull --recurse-submodules
+```
+
+*To remove a submodule:*
+1. *Remove it from the .git configuration files:*  
+```bash
+git rm the_submodule
+```
+2. *Remove it from the modules folder. You can also do this from a UI file explorer of some type:*  
+```bash
+rm -rf .git/modules/the_submodule`
+```
+3. *You may also need to remove the subfolder in your repository.*
+
+Update submodule to latest commit
+```bash
+cd path_to_submodule
+git checkout master && git pull
+cd ..
+git add path_to_submodule
+git commit -m "updating submodule to latest"
+```

@@ -1,6 +1,16 @@
 ---
 tags: [ssh, mosh, sysadmin, bash, connect, connection, remote, multiplexer, screen, tmux, multiwindow]
 ---
+### Copy paste between panes
+1. `ctrl+b` , `[` 
+2. move to start of selection 
+3. `SPACE` 
+4. select end of text
+5. `ENTER`
+6. go to pane to paste to
+7. `ctrl+b`, `]` 
+
+
 #### Git install with my settings (Ubuntu)
 ubuntu_install_git_tmux.sh
 ```bash
