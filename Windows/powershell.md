@@ -48,3 +48,19 @@ is very similar to using bash's [[bash utilities#Using Sed to modify files and p
 ```powershell
 New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 ```
+
+### FZF Key binds in powershell (with fzf already installed)
+```powershell
+# in admin powershell
+Install-Module -Name PSFzf
+# rest can be done in normal powershell
+mkdir "C:\Users\$env:username\Documents\WindowsPowerShell"
+echo "Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'" | Out-File -Append $profile
+```
+
+### Install Node
+```powershell
+scoop install fnm
+echo "fnm env --use-on-cd | Out-String | Invoke-Expression" | Out-File -Append $profile
+fnm install 18 # install lts 18^
+```

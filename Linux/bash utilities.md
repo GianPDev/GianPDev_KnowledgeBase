@@ -1,11 +1,9 @@
 ---
-tags: [ssh, mosh, sysadmin, bash, powershell, edit, script, scripting, sed, terminal, editing, pipe, search, replace, rename]
+tags: [ssh, mosh, sysadmin, bash, powershell, edit, script, scripting, sed, terminal, editing, pipe, search, replace]
 ---
 [[lsof]]
 [[sshfs (mount remote drives)]]
 [[ffmpeg (linux)]]
-[[pacman]]
-
 #### Using rsync over SSH (better copy vs scp)
 
 Copy all files in docs folder to current folder in terminal (with progress and results `-avp`)
@@ -113,25 +111,3 @@ for f in *.sh; do echo converting $f; perl -p -e 's/\r$//' < "$f" > $(basename "
 ```bash
 cat 'subtitlefile.vtt' | sed '/align:start position/d' | sed '/</d' | sed '/\[Music\]/d' | sed '/^foreign/d' | sed '/^$/d' | sed '/^ /d' | sed '1~2d'
 ```
-
-### Fixing messed up batch rename that creates names with special characters within them in bash
-File names: 
-`echo 3414337-random name.png | sed -e '\''s+.*-\[+\[+'\''`
-*as you can see the echo/sed rename I tried doing messed up quite badly*
-Dry run:
-```bash
-ls | sed 'p;s/ | sed.*//' | xargs -d '\n' -n 2 echo mv
-```
-Actual run
-```bash
-ls | sed 'p;s/ | sed.*//' | xargs -d '\n' -n 2 mv
-```
-then for the echo part
-```bash
-ls | sed 'p;s/echo //' | xargs -d '\n' -n 2 mv
-```
-this will remove this without escaping anything:
-` | sed -e '\''s+.*-\[+\[+'\''`
-and the
-`echo `
-*Note: using for loops and variables will just try and execute the sed command and/or other commands in name*
