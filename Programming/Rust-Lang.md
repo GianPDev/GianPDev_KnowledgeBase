@@ -4,6 +4,7 @@ tags: [rust, programming, dev]
 [[Zola Static Site Generator]]
 [[Miniserve website server]]
 [[Dioxus]]
+[[Leptos]]
 
 ### Creating Projects
 #### Create Project with Folder
